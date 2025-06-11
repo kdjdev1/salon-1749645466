@@ -1,0 +1,273 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Salon</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #0a0a23;
+            --secondary-color: #1a1a3a;
+            --accent-color: #00f5ff;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--primary-color);
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: var(--secondary-color);
+            padding: 1rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin-left: 1rem;
+        }
+
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://via.placeholder.com/1920x1080');
+            background-size: cover;
+        }
+
+        .book-now {
+            background-color: var(--accent-color);
+            color: var(--primary-color);
+            border: none;
+            padding: 0.8rem 1.5rem;
+            font-size: 1rem;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 1rem;
+            transition: background-color 0.3s;
+        }
+
+        .book-now:hover {
+            background-color: #00cccc;
+        }
+
+        #services {
+            padding: 4rem 1rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .service {
+            background-color: var(--secondary-color);
+            margin: 1rem;
+            padding: 1.5rem;
+            border-radius: 10px;
+            width: 200px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .service:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 245, 255, 0.3);
+        }
+
+        .icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        #testimonials {
+            padding: 4rem 1rem;
+            text-align: center;
+        }
+
+        .testimonial-carousel {
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            gap: 1rem;
+            padding: 1rem;
+        }
+
+        .testimonial {
+            background-color: var(--secondary-color);
+            padding: 1.5rem;
+            border-radius: 10px;
+            min-width: 250px;
+            scroll-snap-align: start;
+            border: 1px solid var(--accent-color);
+        }
+
+        #consultation {
+            padding: 4rem 1rem;
+            text-align: center;
+        }
+
+        .ai-consultation {
+            background-color: var(--accent-color);
+            color: var(--primary-color);
+            border: none;
+            padding: 0.8rem 1.5rem;
+            font-size: 1rem;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 1rem;
+            transition: background-color 0.3s;
+        }
+
+        .ai-consultation:hover {
+            background-color: #00cccc;
+        }
+
+        #booking {
+            padding: 4rem 1rem;
+            text-align: center;
+        }
+
+        .booking-form {
+            max-width: 400px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .booking-form input, .booking-form select {
+            padding: 0.8rem;
+            border-radius: 5px;
+            border: 1px solid var(--accent-color);
+            background-color: var(--secondary-color);
+            color: white;
+        }
+
+        .booking-form button {
+            background-color: var(--accent-color);
+            color: var(--primary-color);
+            border: none;
+            padding: 0.8rem;
+            font-size: 1rem;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .booking-form button:hover {
+            background-color: #00cccc;
+        }
+
+        footer {
+            background-color: var(--secondary-color);
+            text-align: center;
+            padding: 1rem;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Nebula Salon</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#consultation">Consultation</a></li>
+                <li><a href="#booking">Book Now</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <h1>Future of Beauty Starts Here</h1>
+        <button class="book-now">Book Now</button>
+    </section>
+
+    <section id="services">
+        <div class="service">
+            <i class="icon">💇</i>
+            <h2>Haircuts</h2>
+            <p>Experience our precision haircuts tailored to your style.</p>
+        </div>
+        <div class="service">
+            <i class="icon">💆</i>
+            <h2>Facials</h2>
+            <p>Revitalize your skin with our advanced facial treatments.</p>
+        </div>
+        <!-- Additional services can be added here -->
+    </section>
+
+    <section id="testimonials">
+        <div class="testimonial-carousel">
+            <div class="testimonial">
+                <p>"The best salon experience I've ever had!"</p>
+                <h4>- Client A</h4>
+            </div>
+            <!-- Additional testimonials can be added here -->
+        </div>
+    </section>
+
+    <section id="consultation">
+        <h2>Get Personalized Hair Advice</h2>
+        <button class="ai-consultation">Start Consultation</button>
+    </section>
+
+    <section id="booking">
+        <form class="booking-form">
+            <input type="text" placeholder="Name" required>
+            <input type="email" placeholder="Email" required>
+            <input type="tel" placeholder="Phone" required>
+            <select required>
+                <option value="" disabled selected>Select Service</option>
+                <option value="haircut">Haircut</option>
+                <option value="facial">Facial</option>
+                <!-- Additional options can be added here -->
+            </select>
+            <button type="submit">Book Appointment</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Nebula Salon. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Smooth scroll for navigation links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+
+            // Additional interactivities can be added here
+        });
+    </script>
+</body>
+</html>
